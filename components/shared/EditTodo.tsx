@@ -3,9 +3,9 @@
 import { edit } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Input from "../ui/Input";
-import { BiEdit } from "react-icons/bi";
+// import { BiEdit } from "react-icons/bi";
 import { useState } from "react";
-import Button from "../ui/Button";
+import { Button } from "@/components/ui/button";
 import { todoType } from "@/types/todoTypes";
 
 const EditTodo = ({ todo }: { todo: todoType }) => {
@@ -23,9 +23,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
     <div className="flex gap-5 items-center">
       <Button
         onClick={handleEdit}
-        text={<BiEdit />}
-        actionButton
-      />
+      >Edit</Button>
 
       {editTodo ? (
         <Form action={edit} onSubmit={handleSubmit}>
@@ -41,7 +39,7 @@ const EditTodo = ({ todo }: { todo: todoType }) => {
               placeholder="Edit Todo..."
             />
 
-            <Button type="submit" text="Save" />
+            <Button type="submit" variant="default" className="ml-3">Save</Button>
           </div>
         </Form>
       ) : null}

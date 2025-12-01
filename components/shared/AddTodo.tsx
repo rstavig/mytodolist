@@ -1,7 +1,7 @@
 import { create } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
 import Input from "../ui/Input";
-import Button from "../ui/Button";
+import { Button } from "@/components/ui/button";
 
 const AddTodo = () => {
   return (
@@ -12,7 +12,7 @@ const AddTodo = () => {
           type="text"
           placeholder="Add Todo..."
         />
-        <Button type="submit" text="Add" />
+       <Button type="submit" variant="default" className="ml-3">Add Todo</Button>
       </div>
     </Form>
   );

@@ -1,9 +1,11 @@
 
 import { todoStatus } from "@/app/actions/todoActions";
 import Form from "../ui/Form";
-import Button from "../ui/Button";
+import { Button } from "@/components/ui/button";
+
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { todoType } from "@/types/todoTypes";
+import { Check } from "lucide-react";
 
 const ChangeTodo = ({ todo }: { todo: todoType }) => {
   return (
@@ -16,10 +18,8 @@ const ChangeTodo = ({ todo }: { todo: todoType }) => {
       />
 
       <Button
-        actionButton
         type="submit"
-        text={<AiOutlineCheckCircle />}
-      />
+      ><Check /></Button>
     </Form>
   );
 };

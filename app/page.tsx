@@ -1,10 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import AddTodo from '@/components/shared/AddTodo';
 import Todo from "@/components/shared/Todo";
+import  InfoDialog  from "@/components/shared/InfoDialog";
 
-// import TodoList from '@/components/todos/todo-list';
-// import sampleData from '@/db/sample-data'
-// import { todoTypes } from "@/types/todoTypes";
 
 const prisma = new PrismaClient()
 
@@ -32,16 +30,13 @@ const data = await getData()
 console.log(data);
 
   return(
+    <>
+    <InfoDialog />
     <div className="ml-50 py-20 flex justify-center flex-col items-center">
-      <span className="text-3xl font-extrabold">
-         My Todo list
+      <span className="text-3xl font-extrabold mb-4">
+         Todo list
       </span>
-      <h1 className=" text-3xl mt-3 font-extrabold mb-5">
-       Built with 
-        <span className="text-orange-700 ml-2">
-        Next.js 15
-        </span>
-      </h1>
+      
 
       <div className="flex justify-center flex-col items-center w-[1000px] ">
         <AddTodo />
@@ -55,6 +50,7 @@ console.log(data);
         </div>
       </div>
     </div>
+    </>
   );
 };
 
