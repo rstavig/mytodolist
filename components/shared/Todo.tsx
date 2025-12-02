@@ -14,7 +14,7 @@ const Todo = ({ todo }: { todo: todoType }) => {
   
     return (
       <div
-        className="flex items-center justify-between bg-white py-3 px-20 rounded-2xl ml-20 mr-20"
+        className="flex items-center justify-between bg-white py-3 px-10 rounded-2xl ml-20 mr-20"
         style={todoStyle}
       >
         <ChangeTodo todo={todo} />

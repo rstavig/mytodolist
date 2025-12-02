@@ -21,7 +21,7 @@ export default function InfoDialog() {
 
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>About My Todo List</DialogTitle>
+          <DialogTitle>About This Todo List</DialogTitle>
           <DialogDescription>
             This is a learning project built with modern web technologies.
           </DialogDescription>

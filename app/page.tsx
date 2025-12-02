@@ -16,7 +16,7 @@ async function getData() {
       isCompleted: true,
     },
     orderBy: {
-      createdAt: "desc",
+      // createdAt: "desc",
     },
   });
 
@@ -32,13 +32,13 @@ console.log(data);
   return(
     <>
     <InfoDialog />
-    <div className="ml-50 py-20 flex justify-center flex-col items-center">
+    <div className="ml-50 mr-50 py-20 flex justify-center flex-col items-center">
       <span className="text-3xl font-extrabold mb-4">
-         Todo list
+          Todo list
       </span>
       
 
-      <div className="flex justify-center flex-col items-center w-[1000px] ">
+      <div className="flex justify-center flex-col items-center w-[800px] ">
         <AddTodo />
         <div className="flex flex-col gap-5 items-center justify-center mt-10 w-full">
           {data.map((todo, id) => (

@@ -12,7 +12,7 @@ const AddTodo = () => {
           type="text"
           placeholder="Add Todo..."
         />
-       <Button type="button" variant="default" className="ml-3">Add Todo</Button>
+       <Button type="submit" variant="default" className="ml-3">Add Todo</Button>
       </div>
     </Form>
   );
